@@ -1,0 +1,7 @@
+{
+  "do_rescale": true,
+  "do_resize": true,
+  "feature_extractor_type": "GLPNImageProcessor",
+  "resample": 2,
+  "size_divisor": 32
+}

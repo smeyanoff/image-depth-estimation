@@ -1,0 +1,70 @@
+{
+  "_name_or_path": "vinvino02/glpn-nyu",
+  "architectures": [
+    "GLPNForDepthEstimation"
+  ],
+  "attention_probs_dropout_prob": 0.0,
+  "classifier_dropout_prob": 0.1,
+  "decoder_hidden_size": 64,
+  "depths": [
+    3,
+    8,
+    27,
+    3
+  ],
+  "downsampling_rates": [
+    1,
+    4,
+    8,
+    16
+  ],
+  "drop_path_rate": 0.1,
+  "head_in_index": -1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.0,
+  "hidden_sizes": [
+    64,
+    128,
+    320,
+    512
+  ],
+  "image_size": 224,
+  "initializer_range": 0.02,
+  "layer_norm_eps": 1e-06,
+  "max_depth": 10,
+  "mlp_ratios": [
+    4,
+    4,
+    4,
+    4
+  ],
+  "model_type": "glpn",
+  "num_attention_heads": [
+    1,
+    2,
+    5,
+    8
+  ],
+  "num_channels": 3,
+  "num_encoder_blocks": 4,
+  "patch_sizes": [
+    7,
+    3,
+    3,
+    3
+  ],
+  "sr_ratios": [
+    8,
+    4,
+    2,
+    1
+  ],
+  "strides": [
+    4,
+    2,
+    2,
+    2
+  ],
+  "torch_dtype": "float32",
+  "transformers_version": "4.24.0"
+}
