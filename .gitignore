@@ -130,3 +130,7 @@ dmypy.json
 
 # model
 pytorch_model.bin
+*pt
+
+#objects
+*.obj
