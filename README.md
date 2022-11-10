@@ -1,4 +1,4 @@
-# Creating 3D model from 2D image and showing the model in augmented reality using AR.js
+# Creating 3D model from 2D image and showing the model in AR on website
 
 
 
