@@ -10,7 +10,7 @@ We want to make an algorithm that creates 3D model of furniture from 2D images. 
 
 To create a model from picture yourself you should follow this steps:
 
-***! IMPORTANT !: Please make sure you are using Python 3.8.12***
+***! IMPORTANT !: Please make sure you are using Python 3.8.n***
 
 1. Clone repo:
 
@@ -19,9 +19,6 @@ To create a model from picture yourself you should follow this steps:
 2. Install all the requirements:
 
 `pip install -r requirements.txt`
-
-3. [Download](https://drive.google.com/drive/folders/13TJ4PCw4N65R13PN6ozzgmc8F0lBD9x8?usp=share_link) model wights and add to `depth_estimator/weights` dir.
-
 
 ---
 
@@ -68,11 +65,11 @@ In future we want to figure out how we can pass multiple pictures of object from
 │   ├── midas.py                            - depth prediction code
 │   └── weights
 │       ├── config.json
-│       ├── dpt_large-midas-2f21e586.pt     - model from MiDaS trained on large datasets to predict depth of an image
 │       ├── preprocessor_config.json
 │       └── pytorch_model.bin 
 ├── pipeline.py                             - ML-pipeline code
 ├── requirements.txt
+├── models_testing.ipynb                    - file with models evaluation and compairing
 ├── settings.py
 └── test
 │   ├── depth_predicted                     - predicted depth of an image
@@ -83,6 +80,8 @@ In future we want to figure out how we can pass multiple pictures of object from
 ```
 
 ## Experiments
+
+You can have a look on evaluation of the models in model_testing.ipynb 
 
 ## Reference
 
