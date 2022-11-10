@@ -1,2 +1,2 @@
-from .glpn import *
+# from .glpn import *
 from .midas import *

@@ -4,15 +4,22 @@ import torch
 
 
 class midas_estimator:
-    def __init__(self, weights_path, device):
+    def __init__(self, model, device):
+
+        """
+        model:str ["DPT_Large", "DPT_Hybrid", "MiDaS_small"]
+        """
 
         self.device = torch.device(device)
-        self.model = torch.hub.load("intel-isl/MiDaS", "DPT_Large")
-        self.model.to(self.device)
+        self.model = torch.hub.load("intel-isl/MiDaS", model)
+        self.model.to(device)
         self.model.eval()
         self.transforms = torch.hub.load("intel-isl/MiDaS", "transforms")
-        self.transform = self.transforms.dpt_transform
-
+        if model == "DPT_Large" or model == "DPT_Hybrid":
+            self.transform = self.transforms.dpt_transform
+        else:
+            self.transform = self.transforms.small_transform
+        
     def image_prepare(self, image_path):
 
         image = cv2.imread(image_path)

@@ -4,13 +4,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 import open3d as o3d
 from PIL import Image
+import re
 
 import settings
-from depth_estimator.glpn import glpn_model
+# from depth_estimator.glpn import glpn_model
 from depth_estimator.midas import midas_estimator
 
 
 def depth_visualization_save(image, depth, img_name, save_path):
+
+    """
+    Save .jpg files illustrated depth estimation
+    """
 
     fig, ax = plt.subplots(1, 2)
     ax[0].imshow(image)
@@ -23,6 +28,11 @@ def depth_visualization_save(image, depth, img_name, save_path):
 
 
 def depth_object_save(image, depth, img_name, save_path):
+
+    """
+    Save mesh objects
+    """
+
     image = Image.open(image)
 
     width, height = image.size
@@ -44,7 +54,6 @@ def depth_object_save(image, depth, img_name, save_path):
     # create point cloud
     pcd = o3d.geometry.PointCloud.create_from_rgbd_image(rgbd_image, camera_intrinsic)
 
-    # outliers removal
     cl, ind = pcd.remove_statistical_outlier(nb_neighbors=20, std_ratio=20.0)
     pcd = pcd.select_by_index(ind)
 
@@ -63,7 +72,7 @@ def depth_object_save(image, depth, img_name, save_path):
 
     # save the mesh
     o3d.io.write_triangle_mesh(
-        os.path.join(save_path, img_name.replace("jpg", "obj")), mesh
+        os.path.join(save_path, img_name.replace("jpg", "obj").replace("png", "obj")), mesh
     )
 
 
@@ -74,12 +83,12 @@ def main(
     photo_dir = photo_dir
     dir_files = os.listdir(photo_dir)
 
-    # depth_estimator = glpn_model(
-    #     depth_estimator_weights_path
-    # )
-    depth_estimator = midas_estimator(depth_estimator_weights_path, device)
+    depth_estimator = midas_estimator("DPT_Large", device)
 
     for photo_file_name in dir_files:
+
+        if re.match('.+depth.+', photo_file_name) is not None:
+            continue
 
         stock_image = os.path.join(photo_dir, photo_file_name)
 
