@@ -4,9 +4,9 @@ This repository contains our implementation of creating a 3d model from single i
 
 ## Task
 
+We want to make an algorithm that creates 3D model of furniture from 2D images. Then we want to fit this furniture in the interior of the room using AR, so we needed a website that can show the 3D model using your camera. 
 
 ## Installation 
-
 
 To create a model from picture yourself you should follow this steps:
 
@@ -45,9 +45,40 @@ ngrok http 80
 
 ## Solution
 
-### Example
+The pipeline can be seen in pipeline.py:
+
+1. First we take the picture from *test/photos* directory, read it and pass to MiDaS depth estimator
+2. Once depth of the picture is estimated the result of this calculation is saved in *test/depth_predicted* directory:
+
+![photo_2022-11-03_21-52-18 (2)](https://user-images.githubusercontent.com/27068383/201118396-dd38f952-04b8-417c-aa3a-e4d057af8eed.jpg)
+
+3. Then the .obj object is saved:
+
+
+
+In future we want to figure out how we can pass multiple pictures of object from different angles to create a full model that will be accurate enough.
 
 ## Project tree
+
+.
+├── depth_estimator
+│   ├── glpn.py
+│   ├── midas.py                            - depth prediction code
+│   └── weights
+│       ├── config.json
+│       ├── dpt_large-midas-2f21e586.pt     - model from MiDaS trained on large datasets to predict depth of an image
+│       ├── preprocessor_config.json
+│       └── pytorch_model.bin 
+├── pipeline.py                             - ML-pipeline code
+├── requirements.txt
+├── settings.py
+└── test
+│   ├── depth_predicted                     - predicted depth of an image
+│   ├── objects                             - saved .obj 3D objects created from pictures
+│   └── photos                              - source pictures (can be in .jpg .png)
+└── visualisation
+    └── index.html                          - HTML-code of website to scan and show the 3d model on the marker (created using AR.js)
+
 
 ## Experiments
 
