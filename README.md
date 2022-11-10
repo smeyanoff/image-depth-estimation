@@ -24,7 +24,7 @@ To create a model from picture yourself you should follow this steps:
 
 To display the example 3D model in AR you should follow this steps:
 
-1. Download [this](https://drive.google.com/file/d/17ADHEdwKrz4rE9oNZdG7C44uUbicCnlf/view?usp=sharing) 3D model object (or any other and name it "test_object.obj") and put it in *visualisation* directory
+1. Download [this](https://drive.google.com/file/d/1wjN1vsNTyyyofeo-0U_VWO305y0F-mro/view?usp=sharing) 3D model object (or any other and name it "test_object.obj") and put it in *visualisation* directory
 2. Run the server on your localhost:
 
 `cd visualisation`
