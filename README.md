@@ -4,9 +4,9 @@ This repository contains our implementation of creating a 3d model from single i
 
 ## instalation 
 
-To create a model from picture yourself you should follow this steps:
+**To create a model from picture yourself you should follow this steps:**
 
-**!IMPORTANT!**
+***!IMPORTANT!***
 
 `Please make sure you are using Python 3.8.12!`
 
@@ -19,3 +19,19 @@ To create a model from picture yourself you should follow this steps:
 `pip install -r requirements.txt`
 
 3. [Download](https://drive.google.com/drive/folders/13TJ4PCw4N65R13PN6ozzgmc8F0lBD9x8?usp=share_link) model wights and add to `depth_estimator/weights` dir.
+
+
+**To display the model in AR you should follow this steps:**
+
+`
+cd visualisation
+python -m http.server
+`
+
+This will run the server on your localhost.
+
+You should use the device with camera. To host this website with your PC and open it on other device you can install [ngrok](https://ngrok.com) and then run this command:
+
+`
+ngrok http 80
+`
