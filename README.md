@@ -60,6 +60,7 @@ In future we want to figure out how we can pass multiple pictures of object from
 
 ## Project tree
 
+`
 .
 ├── depth_estimator
 │   ├── glpn.py
@@ -78,7 +79,7 @@ In future we want to figure out how we can pass multiple pictures of object from
 │   └── photos                              - source pictures (can be in .jpg .png)
 └── visualisation
     └── index.html                          - HTML-code of website to scan and show the 3d model on the marker (created using AR.js)
-
+`
 
 ## Experiments
 
