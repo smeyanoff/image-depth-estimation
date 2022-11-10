@@ -6,9 +6,8 @@ This repository contains our implementation of creating a 3d model from single i
 
 **To create a model from picture yourself you should follow this steps:**
 
-***!IMPORTANT!***
+***! IMPORTANT: Please make sure you are using Python 3.8.12 !***
 
-`Please make sure you are using Python 3.8.12!`
 
 1. Clone repo:
 
