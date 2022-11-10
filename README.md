@@ -4,10 +4,10 @@ This repository contains our implementation of creating a 3d model from single i
 
 ## instalation 
 
-**To create a model from picture yourself you should follow this steps:**
 
-***! IMPORTANT: Please make sure you are using Python 3.8.12 !***
+To create a model from picture yourself you should follow this steps:
 
+***! IMPORTANT !: Please make sure you are using Python 3.8.12***
 
 1. Clone repo:
 
@@ -22,7 +22,7 @@ This repository contains our implementation of creating a 3d model from single i
 
 ---
 
-**To display the model in AR you should follow this steps:**
+To display the model in AR you should follow this steps:
 
 `
 cd visualisation
