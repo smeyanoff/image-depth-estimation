@@ -2,7 +2,13 @@
 
 ### instalation 
 
+!IMPORTANT!
+`Please make sure you are using Python 3.8.12!`
+
+Clone repo:
+
 `git clone https://github.com/smeyanoff/image-depth-estimation`
+
 
 `pip install -r requirements.txt`
 
