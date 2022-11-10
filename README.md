@@ -26,11 +26,12 @@ To display the model in AR you should follow this steps:
 1. Run the server on your localhost:
 
 `cd visualisation`
+
 `python -m http.server`
 
 
 2. If you have a webcamera on your PC you should download this picture:
-<img src="[drawing.jpg](https://user-images.githubusercontent.com/27068383/201076772-b0a1b911-7b82-47eb-9933-7bea8d2dff8f.png)" alt="hiro" width="200"/>
+<img src="https://user-images.githubusercontent.com/27068383/201076772-b0a1b911-7b82-47eb-9933-7bea8d2dff8f.png" alt="hiro" width="200"/>
 
 
 
