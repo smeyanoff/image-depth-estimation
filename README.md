@@ -86,4 +86,5 @@ You can have a look on evaluation of the models in model_testing.ipynb
 ## Reference
 
 [PyTorch MiDaS](https://pytorch.org/hub/intelisl_midas_v2/)
+
 [AR.js](https://ar-js-org.github.io/AR.js-Docs/)
