@@ -50,9 +50,11 @@ The pipeline can be seen in pipeline.py:
 1. First we take the picture from *test/photos* directory, read it and pass to MiDaS depth estimator
 2. Once depth of the picture is estimated the result of this calculation is saved in *test/depth_predicted* directory:
 
-![photo_2022-11-03_21-52-18 (2)](https://user-images.githubusercontent.com/27068383/201118396-dd38f952-04b8-417c-aa3a-e4d057af8eed.jpg)
+<img src="https://user-images.githubusercontent.com/27068383/201118396-dd38f952-04b8-417c-aa3a-e4d057af8eed.jpg" alt="depth_predicted" width="200"/>
 
 3. Then the .obj object is saved:
+
+https://user-images.githubusercontent.com/27068383/201121453-53acdd5a-aafe-43a0-8e40-30c314e396cf.mov
 
 
 
