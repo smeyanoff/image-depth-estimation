@@ -24,12 +24,14 @@ To create a model from picture yourself you should follow this steps:
 
 To display the model in AR you should follow this steps:
 1. Run the server on your localhost:
-`cd visualisation
-python -m http.server
-`
+
+`cd visualisation`
+`python -m http.server`
+
 
 2. If you have a webcamera on your PC you should download this picture:
-![hiro](https://user-images.githubusercontent.com/27068383/201076772-b0a1b911-7b82-47eb-9933-7bea8d2dff8f.png)
+<img src="[drawing.jpg](https://user-images.githubusercontent.com/27068383/201076772-b0a1b911-7b82-47eb-9933-7bea8d2dff8f.png)" alt="hiro" width="200"/>
+
 
 
 3. You also can run the website on your other device with camera. To host this website with your PC and open it on other device you can install [ngrok](https://ngrok.com) and then run this command:
