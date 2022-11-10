@@ -54,18 +54,18 @@ The pipeline can be seen in pipeline.py:
 
 3. Then the .obj object is saved:
 
-https://user-images.githubusercontent.com/27068383/201121453-53acdd5a-aafe-43a0-8e40-30c314e396cf.mov
+
+![Запись-экрана-2022-11-10-в-17 44 12](https://user-images.githubusercontent.com/27068383/201121933-1baa06cd-38e4-4121-b9ba-3dda416b0097.gif)
 
 
-
-In future we want to figure out how we can pass multiple pictures of object from different angles to create a full model that will be accurate enough.
+In future we want to figure out how we can pass multiple pictures of object from different angles to create a full model that will be accurate enough. Some code of the project is not deleted due to testing reasons.
 
 ## Project tree
 
 ```
 .
 ├── depth_estimator
-│   ├── glpn.py
+│   ├── glpn.py                             - this code is for testing the other model
 │   ├── midas.py                            - depth prediction code
 │   └── weights
 │       ├── config.json
@@ -86,3 +86,6 @@ In future we want to figure out how we can pass multiple pictures of object from
 ## Experiments
 
 ## Reference
+
+[PyTorch MiDaS](https://pytorch.org/hub/intelisl_midas_v2/)
+[AR.js](https://ar-js-org.github.io/AR.js-Docs/)
