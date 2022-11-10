@@ -2,7 +2,10 @@
 
 This repository contains our implementation of creating a 3d model from single image using [PyTorch MiDaS](https://pytorch.org/hub/intelisl_midas_v2/) and then showing the model in augmented reality on website using [AR.js](https://ar-js-org.github.io/AR.js-Docs/).
 
-## instalation 
+## Task
+
+
+## Installation 
 
 
 To create a model from picture yourself you should follow this steps:
@@ -39,3 +42,13 @@ The model that is shown as an example is located in visualisation/object directo
 `
 ngrok http 80
 `
+
+## Solution
+
+### Example
+
+## Project tree
+
+## Experiments
+
+## Reference
