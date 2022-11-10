@@ -50,12 +50,11 @@ The pipeline can be seen in pipeline.py:
 1. First we take the picture from *test/photos* directory, read it and pass to MiDaS depth estimator
 2. Once depth of the picture is estimated the result of this calculation is saved in *test/depth_predicted* directory:
 
-<img src="https://user-images.githubusercontent.com/27068383/201118396-dd38f952-04b8-417c-aa3a-e4d057af8eed.jpg" alt="depth_predicted" width="200"/>
+<img src="https://user-images.githubusercontent.com/27068383/201118396-dd38f952-04b8-417c-aa3a-e4d057af8eed.jpg" alt="depth_predicted" width="300"/>
 
 3. Then the .obj object is saved:
 
-
-![Запись-экрана-2022-11-10-в-17 44 12](https://user-images.githubusercontent.com/27068383/201121933-1baa06cd-38e4-4121-b9ba-3dda416b0097.gif)
+![Запись-экрана-2022-11-10-в-17 44 12](https://user-images.githubusercontent.com/27068383/201122531-2b03cdc8-0cdf-4c81-950c-500f6686b67e.gif)
 
 
 In future we want to figure out how we can pass multiple pictures of object from different angles to create a full model that will be accurate enough. Some code of the project is not deleted due to testing reasons.
