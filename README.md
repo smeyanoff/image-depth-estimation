@@ -2,7 +2,8 @@
 
 ### instalation 
 
-!IMPORTANT!
+*!IMPORTANT!*
+
 `Please make sure you are using Python 3.8.12!`
 
 Clone repo:
