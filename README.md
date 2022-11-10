@@ -54,7 +54,7 @@ The pipeline can be seen in pipeline.py:
 
 3. Then the .obj object is saved:
 
-![Запись-экрана-2022-11-10-в-17 44 12](https://user-images.githubusercontent.com/27068383/201122531-2b03cdc8-0cdf-4c81-950c-500f6686b67e.gif)
+![Запись-экрана-2022-11-10-в-17 44 12](https://user-images.githubusercontent.com/27068383/201122720-e0b7ac7e-c900-47de-b04e-166b25f72f22.gif)
 
 
 In future we want to figure out how we can pass multiple pictures of object from different angles to create a full model that will be accurate enough. Some code of the project is not deleted due to testing reasons.
