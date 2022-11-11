@@ -1,6 +1,7 @@
 # Creating 3D model from 2D image and showing the model in AR on website
 
-This repository contains our implementation of creating a 3d model from single image using [PyTorch MiDaS](https://pytorch.org/hub/intelisl_midas_v2/) and then showing the model in augmented reality on website using [AR.js](https://ar-js-org.github.io/AR.js-Docs/).
+This repository contains our implementation of creating a 3d model from single image using [PyTorch MiDaS](https://pytorch.org/hub/intelisl_midas_v2/) and then showing the model in augmented reality on website using [AR.js](https://ar-js-org.github.io/AR.js-Docs/). 
+If you want to watch saved 3d objects, download [this](https://www.meshlab.net/#download)
 
 ## Task
 
