@@ -1,6 +1,7 @@
 import os 
 import torch
 
+MODEL = "midas" # "glpn" "midas"
 DEPTH_ESTIMATOR_WEIGHTS_PATH = os.path.normpath(
     "depth_estimator/weights"
 )

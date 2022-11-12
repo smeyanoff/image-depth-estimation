@@ -84,7 +84,54 @@ In future we want to figure out how we can pass multiple pictures of object from
 
 ## Experiments
 
-You can have a look on evaluation of the models in model_testing.ipynb 
+### Our goal in models testing was to evaluete how accurately they can predict depth of common domestick objects
+
+In this way we used RGBD dataset was found [here](https://www.kaggle.com/datasets/metagrasp/metagraspnetdifficulty1-easy)
+
+Our metric was MAE and we compared model`s predicted depth with true object depth. Moreover we evaluated run-time
+
+| photo_name | model       | MAE    | run-time (sec) |
+|------------|-------------|--------|----------------|
+| 0          | DPT_Large   | 62.28  | 0.728810       |
+| 1          | DPT_Large   | 123.02 | 0.551458       |
+| 2          | DPT_Large   | 111.97 | 0.575197       |
+| 3          | DPT_Large   | 122.65 | 0.557782       |
+| 4          | DPT_Large   | 111.37 | 0.569186       |
+| 5          | DPT_Large   | 116.99 | 0.566448       |
+| 6          | DPT_Large   | 111.79 | 0.558274       |
+| 7          | DPT_Large   | 122.68 | 0.552736       |
+| 8          | DPT_Large   | 111.23 | 0.559168       |
+| 0          | MiDaS_small | 200.15 | 0.258206       |
+| 1          | MiDaS_small | 157.51 | 0.037596       |
+| 2          | MiDaS_small | 286.24 | 0.033803       |
+| 3          | MiDaS_small | 361.18 | 0.036079       |
+| 4          | MiDaS_small | 258.91 | 0.033406       |
+| 5          | MiDaS_small | 167.70 | 0.034455       |
+| 6          | MiDaS_small | 197.53 | 0.036982       |
+| 7          | MiDaS_small | 323.14 | 0.035028       |
+| 8          | MiDaS_small | 228.32 | 0.035127       |
+| 0          | glpn        | 61.89  | 0.093825       |
+| 1          | glpn        | 125.74 | 0.100389       |
+| 2          | glpn        | 140.61 | 0.106214       |
+| 3          | glpn        | 129.60 | 0.097953       |
+| 4          | glpn        | 141.15 | 0.114711       |
+| 5          | glpn        | 127.72 | 0.114895       |
+| 6          | glpn        | 140.60 | 0.114242       |
+| 7          | glpn        | 128.32 | 0.117232       |
+| 8          | glpn        | 141.58 | 0.107963       |
+
+Mean result
+
+| model       | MAE        | run-time (sec) |
+|-------------|------------|----------------|
+| DPT_Large   | 110.442222 | 0.579895       |
+| MiDaS_small | 242.297778 | 0.060076       |
+| glpn        | 126.356667 | 0.107492       |
+
+
+## Algorithm performance
+
+Models were evaluated on system with 12th Gen Intel(R) Core(TM) i5-12450H   2.00 GHz and GeForce MX550. We need to evaluate depth not only for one photo but more than six, than we need multiply run-time on count of photos plus time to build 3D object. 
 
 ## Reference
 

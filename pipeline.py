@@ -7,7 +7,7 @@ from PIL import Image
 import re
 
 import settings
-# from depth_estimator.glpn import glpn_model
+from depth_estimator.glpn import glpn_model
 from depth_estimator.midas import midas_estimator
 
 
@@ -72,18 +72,32 @@ def depth_object_save(image, depth, img_name, save_path):
 
     # save the mesh
     o3d.io.write_triangle_mesh(
-        os.path.join(save_path, img_name.replace("jpg", "obj").replace("png", "obj")), mesh
+        os.path.join(
+            save_path, 
+            img_name
+            .replace("jpg", "obj")
+            .replace("png", "obj")
+            ), 
+        mesh
     )
 
 
 def main(
-    photo_dir, photo_save_path, object_save_path, depth_estimator_weights_path, device
+    photo_dir, 
+    photo_save_path, 
+    object_save_path, 
+    depth_estimator_weights_path, 
+    model,
+    device
 ):
 
     photo_dir = photo_dir
     dir_files = os.listdir(photo_dir)
 
-    depth_estimator = midas_estimator("DPT_Large", device)
+    if model == "midas":
+        depth_estimator = midas_estimator("DPT_Large", device)
+    elif model == "glpn":
+        depth_estimator = glpn_model(depth_estimator_weights_path)
 
     for photo_file_name in dir_files:
 
@@ -96,7 +110,7 @@ def main(
         depth = depth_estimator.predict_depth(image)
 
         depth_visualization_save(image, depth, photo_file_name, photo_save_path)
-
+        
         depth_object_save(stock_image, depth, photo_file_name, object_save_path)
 
 
@@ -107,5 +121,6 @@ if __name__ == "__main__":
         settings.SAVE_DEPTH_PRED_PATH,
         settings.SAVE_OBJ_PATH,
         settings.DEPTH_ESTIMATOR_WEIGHTS_PATH,
+        settings.MODEL,
         settings.DEVICE,
     )
