@@ -86,9 +86,9 @@ In future we want to figure out how we can pass multiple pictures of object from
 
 ### Our goal in models testing was to evaluete how accurately they can predict depth of common domestick objects
 
-In this way we used RGBD dataset was found [here](https://www.kaggle.com/datasets/metagrasp/metagraspnetdifficulty1-easy)
+In this way we used RGBD dataset was found [here](https://www.kaggle.com/datasets/metagrasp/metagraspnetdifficulty1-easy).
 
-Our metric was MAE and we compared model`s predicted depth with true object depth. Moreover we evaluated run-time
+Our metric was MAE and we compared model`s predicted depth with true object depth. Moreover we evaluated run-time.
 
 | photo_name | model       | MAE    | run-time (sec) |
 |------------|-------------|--------|----------------|
@@ -120,7 +120,7 @@ Our metric was MAE and we compared model`s predicted depth with true object dept
 | 7          | glpn        | 128.32 | 0.117232       |
 | 8          | glpn        | 141.58 | 0.107963       |
 
-Mean result
+Mean results.
 
 | model       | MAE        | run-time (sec) |
 |-------------|------------|----------------|
